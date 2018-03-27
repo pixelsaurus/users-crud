@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create User</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/datepicker.css'>
+</head>
+<body>
+  <script src="/javascripts/datepicker.js"></script>
+  <script>const picker = datepicker('.datepicker');</script>
+    <div class="container">
+      <a href="/users" class="user-button">User List</a>
+      <h1>Edit User</h1>
+      <form action="/users/update/<%= user._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" value="<%= user.name %>" /></td>
+            </tr>
+            <tr>
+              <td>User Name</td>
+              <td><input type="text" name="username" value="<%= user.username %>" /></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td><input type="text" name="email" value="<%= user.email %>" /></td>
+            </tr>
+            <tr>
+              <td>Birthday</td>
+              <td><input type="date" name="birthday" id="flatpicker-tryme" value="<%= moment.unix(user.birthday/1000).format("YYYY-MM-DD") %>" /></td>
+            </tr>
+            <tr>
+              <td>Favorite Color</td>
+              <td><input type="text" name="favoriteColor" value="<%= user.favoriteColor %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

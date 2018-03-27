@@ -1,0 +1,155 @@
+body {
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #555555;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  position: relative;
+  padding: 20px;
+  background-color: #efefef;
+  width: calc(600px - 2rem);
+  margin: 0 auto;
+  border-radius: 6px;
+}
+.container h3 a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #00AE4D;
+  border-radius: 6px;
+  color: #FFFFFF;
+}
+
+.container h3 a:hover, .container table tr td button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.container table {
+  width: 75%;
+}
+
+.container table tr td {
+  padding: 5px;
+}
+
+.container table tr td input, .container table tr td textarea {
+  border: solid 1px #dddddd;
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: 100%;
+  color: #777777;
+}
+
+.container table tr td button {
+  border: solid 1px #AABF5C;
+  background-color: #00AE4D;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.container form button {
+  border: solid 1px #CB2027;
+  background-color: #DD4B39;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.container .list-table {
+  width: 360px;
+  border: solid 2px #DDDDDD;
+  border-spacing: 0;
+}
+
+.container .list-table th {
+  border-bottom: solid 2px #DDDDDD;
+}
+
+.users {
+  width: calc( 100% + 1rem );
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0 0 0 -0.5rem;
+  padding: 0;
+}
+
+.user-item {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: calc( 33.33% - 1rem );
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.user-detail {
+  border-spacing: 0;
+}
+
+.user-detail tr:nth-child(even) > td {
+  background: #e5e5e5;
+}
+
+.user-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.user-item .user-image {
+  position: relative;
+  float: none;
+  margin: 0 auto 1rem;
+}
+
+.user-item a {
+  width: 4rem;
+  margin: 0 auto;
+  text-decoration: none;
+  padding: 4px 5px;
+  background-color: #00AE4D;
+  border-radius: 6px;
+  color: #FFFFFF;
+}
+
+.user-item a:hover {
+  background: #000;
+}
+
+.user-button {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #666;
+  border-radius: 0.5rem;
+}
+
+.user-button:hover {
+  background: #000;
+}
+
+.user-ui {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 0 0;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h1>User List</h1>
+      <% if(users.length>0) { %>
+      <ul class="users">
+          <% for(var i=0; i<users.length;i++) { %>
+            <li class="user-item">
+              <h4><%= users[i].username%></h4>
+              <%if (users[i].image) { %>
+                <img src="<%= users[i].image%>" alt="<%= users[i].name%>" class="user-image">
+              <% }else{ %>
+                <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=retro&f=y" alt="<%= users[i].name%>" class="user-image">
+              <% } %>
+              <a href="/users/view/<%= users[i]._id%>">View</a>
+            </li>
+          <% } %>
+      </ur>
+      <% } else { %>
+        <div>No users found.</div>
+      <% } %>
+      <h3><a href="/users/create" class="user-button">Create User</a></h3>
+    </div>
+  </body>
+</html>
